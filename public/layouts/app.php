@@ -2,7 +2,27 @@
 <html lang="en">
 
 <head>
-    <link href="assets/img/favicon.png" rel="icon">
+
+    <title>Sakari Management Group</title>
+
+    <meta name="description" content="Empowering healthcare through exceptional virtual support. Sakari Management Group provides skilled virtual assistants for utilization management, care coordination, billing, transcription, and more.">
+    <meta name="keywords" content="Sakari Management Group, virtual healthcare assistants, healthcare outsourcing, utilization management, care coordination, medical transcription, healthcare VAs, virtual nurse, medical VA, virtual assistant healthcare, medical billing, healthcare support">
+    <meta name="author" content="Sakari Management Group">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Sakari Management Group | Virtual Healthcare Support">
+    <meta property="og:description" content="Streamline your operations with skilled virtual assistants. Led by U.S.-trained clinicians, Sakari offers scalable, compliant, and cost-effective healthcare staffing solutions.">
+    <meta property="og:image" content="https://sakariwellness.com/images/og-image.jpg"> <!-- Replace with your actual OG image URL -->
+    <meta property="og:url" content="https://sakariwellness.com">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sakari Management Group | Virtual Healthcare Support">
+    <meta name="twitter:description" content="Empowering healthcare through exceptional virtual support. Discover tailored solutions for billing, care coordination, and more.">
+    <meta name="twitter:image" content="https://sakariwellness.com/images/twitter-card.jpg"> <!-- Replace with your actual Twitter card image URL -->
+
+
+    <link href="assets/img/logo.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Fonts -->
@@ -40,6 +60,7 @@
                     <li><a href="#team">Team</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://igostaffing.com/" target="_blank">Visit iGO Staffing</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -51,7 +72,7 @@
 
     <section id="hero" class="hero section dark-background">
 
-        <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+        <img src="assets/img/medical-procedures-3579029.jpg" alt="" data-aos="fade-in">
 
         <div class="container d-flex flex-column align-items-center">
             <h3 data-aos="fade-up" data-aos-delay="100">Empowering Healthcare Through Exceptional Virtual Support</h3>
@@ -59,7 +80,7 @@
             <script>
                 document.addEventListener("DOMContentLoaded", function() {
                     const sentences = [
-                    "Professional, reliable, and skilled virtual assistants to streamline your healthcare operations and reduce costs.",
+                        "Professional, reliable, and skilled virtual assistants to streamline your healthcare operations and reduce costs.",
                         "Sakari Management Group is a business process outsourcing firm led by U.S.-trained clinicians, providing premium virtual healthcare talent to organizations across the globe.",
                         "From utilization management and care coordination to transcription and billing, we match your needs with highly skilled professionals who understand the demands of modern healthcare.",
                         "Whether you're a growing practice or an enterprise-level organization, we deliver solutions that scale with you.",
@@ -71,13 +92,14 @@
                     function typeSentence(sentence, cb) {
                         el.textContent = "";
                         let i = 0;
+
                         function typeWriter() {
                             if (i < sentence.length) {
                                 el.textContent += sentence.charAt(i);
                                 i++;
                                 setTimeout(typeWriter, 35);
                             } else if (cb) {
-                                setTimeout(cb, 1800); 
+                                setTimeout(cb, 1800);
                             }
                         }
                         typeWriter();
@@ -87,10 +109,10 @@
                         typeSentence(sentences[sentenceIdx], function() {
                             el.textContent = "";
                             sentenceIdx = (sentenceIdx + 1) % sentences.length;
-                            setTimeout(showNextSentence, 400); 
+                            setTimeout(showNextSentence, 400);
                         });
                     }
-                    
+
                     showNextSentence();
                 });
             </script>
@@ -102,41 +124,30 @@
 
     </section>
 
-    
+
     <!-- Clients Section -->
     <section id="clients" class="clients section light-background">
 
-      <div class="container" data-aos="fade-up">
+        <div class="container d-flex justify-content-center" data-aos="fade-up">
+            <div class="row gy-4 justify-content-center">
 
-        <div class="row gy-4">
 
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+                <div class="col-xl-3 col-md-3 col-6 client-logo d-flex justify-content-center">
+                    <img src="assets/img/igot.png" class="img-fluid" alt="">
+                </div><!-- End Client Item -->
+                <div class="col-xl-3 col-md-3 col-6 client-logo d-flex justify-content-center">
+                    <a href="https://igostaffing.com/" target="_blank">
 
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+                        <img src="assets/img/logo.png" class="img-fluid" alt="">
+                    </a>
 
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
+                </div><!-- End Client Item -->
+                <div class="col-xl-3 col-md-3 col-6 client-logo d-flex justify-content-center">
 
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
+                    <img src="assets/img/sakari.png" class="img-fluid" alt="">
+                </div><!-- End Client Item -->
+            </div>
         </div>
-
-      </div>
 
     </section><!-- /Clients Section -->
 
@@ -275,6 +286,7 @@
         </div>
 
     </section>
+
     <section id="services" class="services section">
 
         <!-- Section Title -->
@@ -345,7 +357,7 @@
                 <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
                     <div class="service-item">
                         <div class="img">
-                            <img src="assets/img/services-2.jpg" class="img-fluid" alt="Scheduling Support">
+                            <img src="assets/img/Scheduling.jpg" class="img-fluid" alt="Scheduling Support">
                         </div>
                         <div class="details position-relative">
                             <div class="icon">
@@ -363,7 +375,7 @@
                 <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
                     <div class="service-item">
                         <div class="img">
-                            <img src="assets/img/services-2.jpg" class="img-fluid" alt="Utilization Management">
+                            <img src="assets/img/Utilization.jpg" class="img-fluid" alt="Utilization Management">
                         </div>
                         <div class="details position-relative">
                             <div class="icon">
@@ -381,7 +393,7 @@
                 <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="700">
                     <div class="service-item">
                         <div class="img">
-                            <img src="assets/img/services-2.jpg" class="img-fluid" alt="Care Coordination">
+                            <img src="assets/img/CareCoordination.jpg" class="img-fluid" alt="Care Coordination">
                         </div>
                         <div class="details position-relative">
                             <div class="icon">
@@ -399,7 +411,7 @@
                 <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="800">
                     <div class="service-item">
                         <div class="img">
-                            <img src="assets/img/services-2.jpg" class="img-fluid" alt="Patient Navigation">
+                            <img src="assets/img/PatientNavigation.jpg" class="img-fluid" alt="Patient Navigation">
                         </div>
                         <div class="details position-relative">
                             <div class="icon">
@@ -417,7 +429,7 @@
                 <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="900">
                     <div class="service-item">
                         <div class="img">
-                            <img src="assets/img/services-2.jpg" class="img-fluid" alt="Billing & Coding">
+                            <img src="assets/img/billing-v2.jpg" class="img-fluid" alt="Billing & Coding">
                         </div>
                         <div class="details position-relative">
                             <div class="icon">
@@ -435,7 +447,7 @@
                 <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="1000">
                     <div class="service-item">
                         <div class="img">
-                            <img src="assets/img/services-2.jpg" class="img-fluid" alt="Sales & Marketing Support">
+                            <img src="assets/img/sales.jpg" class="img-fluid" alt="Sales & Marketing Support">
                         </div>
                         <div class="details position-relative">
                             <div class="icon">
