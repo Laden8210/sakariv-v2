@@ -244,7 +244,7 @@
 
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="member">
-                        <div class="pic"><img src="assets/img/team/glenda.jpg" class="img-fluid" alt=""></div>
+                        <div class="pic"><img src="assets/img/team/glenda-v2.png" class="img-fluid" alt=""></div>
                         <div class="member-description ">
                             Glenda Lu-Belarmino – Chief of Human Resources<br>
                             A seasoned RN and operations leader, Glenda brings a decade of experience in building and managing high-performing VA teams. She drives talent acquisition, performance optimization, and strategic growth.
