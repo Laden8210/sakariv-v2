@@ -12,6 +12,7 @@ try {
 
     $routes = [
         '' => ['file' => 'home.php', 'title' => 'Login', 'auth_required' => false],
+        'apply' => ['file' => 'apply.php', 'title' => 'Apply Now', 'auth_required' => false],
 
     ];
 
@@ -50,10 +51,7 @@ try {
         $role = $user['role'];
     }
 
-    if (isset($_SESSION['auth']) && in_array($request, ['login', 'register', 'forgot-password', '']) && $request !== 'login') {
-        header('Location: dashboard');
-        exit;
-    }
+
 
     $title = $route['title'];
     $content = __DIR__ . '/public/view/' . $route['file'];
