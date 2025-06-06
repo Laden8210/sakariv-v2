@@ -24,7 +24,7 @@
                             <i class="fas fa-user-md"></i>
                         </div>
                         <div class="stat-content">
-                            <h3>500+</h3>
+                            <h3>100+</h3>
                             <p>Healthcare Professionals</p>
                         </div>
                     </div>
@@ -203,12 +203,12 @@
                             A U.S.-trained Family Nurse Practitioner with clinical roots in Psychiatry, LDRP, and Wound Care, Van leads with a mission to bridge frontline healthcare experience with scalable operational solutions. As CEO, she champions excellence, compliance, and innovation across every aspect of our business.
                         </div>
                         <div class="member-info">
-                            <h4>Van Cacho</h4>
+                            <h4>Van Cacho FNP-BC</h4>
                             <span>CEO & Co-Founder</span>
                             <div class="social">
-                                <a href=""><i class="bi bi-twitter-x"></i></a>
+                          
                                 <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
+           
                                 <a href="https://www.linkedin.com/in/junette-cacho-8a7309138/"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
@@ -223,12 +223,12 @@
                             With over 15 years of clinical experience as a Doctor of Physical Therapy, Dr. Josh specializes in orthopedic rehabilitation and performance optimization. He now leads our efforts to bring high-impact care models to healthcare systems through virtual staffing solutions.
                         </div>
                         <div class="member-info">
-                            <h4>Dr. Joshua Cacho</h4>
+                            <h4>Dr. Joshua Cacho DPT</h4>
                             <span>Co-Founder</span>
                             <div class="social">
 
                                 <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
+
                                 <a href="https://www.linkedin.com/in/joshua-cacho-pt-dpt-b2b34734/"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
@@ -244,12 +244,12 @@
                             A seasoned RN and operations leader, Glenda brings a decade of experience in building and managing high-performing VA teams. She drives talent acquisition, performance optimization, and strategic growth.
                         </div>
                         <div class="member-info">
-                            <h4>Glenda Lu-Belarmino</h4>
+                            <h4>Glenda Lu-Belarmino BSN, RN, MN</h4>
                             <span>Chief of Human Resources</span>
                             <div class="social">
 
                                 <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
+       
                                 <a href="https://www.linkedin.com/in/glenda-belarmino-67a04421/"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
@@ -263,12 +263,12 @@
                             Mike Austria – VP, Business Development<br>
                             An RN by training and serial entrepreneur, Mike blends clinical understanding with financial acumen. As CFO, he helps nurses transition into high-impact roles while ensuring clients receive cost-effective, quality service. </div>
                         <div class="member-info">
-                            <h4>Mike Austria</h4>
+                            <h4>Mike Austria BSN, RN, FNP-Candidate</h4>
                             <span>VP, Business Development</span>
                             <div class="social">
 
                                 <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
+
                                 <a href="https://www.linkedin.com/in/mike-austria-bsn-rn-b786856b/"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
@@ -333,7 +333,7 @@
                 <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
                     <div class="service-item">
                         <div class="img">
-                            <img src="assets/img/services-3.jpg" class="img-fluid" alt="Medical Records Management">
+                            <img src="assets/img/medical-record-v4.jpg" class="img-fluid" alt="Medical Records Management">
                         </div>
                         <div class="details position-relative">
                             <div class="icon">
@@ -405,7 +405,7 @@
                 <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="800">
                     <div class="service-item">
                         <div class="img">
-                            <img src="assets/img/PatientNavigation.jpg" class="img-fluid" alt="Patient Navigation">
+                            <img src="assets/img/patient-navigation.jpg" class="img-fluid" alt="Patient Navigation">
                         </div>
                         <div class="details position-relative">
                             <div class="icon">
