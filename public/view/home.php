@@ -10,10 +10,10 @@
                 </div>
 
                 <div class="cta-buttons">
-                    <a href="#about" class="btn btn-primary">
+                    <a href="mailto:agency@sakariwellness.com?subject=CV%20Submission" class="btn btn-primary">
                         <i class="fas fa-user-nurse"></i>Hire a Nurse Now
                     </a>
-                    <a href="#contact" class="btn btn-secondary">
+                    <a href="mailto:agency@sakariwellness.com?subject=CV%20Submission" class="btn btn-secondary">
                         <i class="fas fa-calendar-check"></i>Schedule a Consultation
                     </a>
                 </div>
