@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="cta-buttons">
-                    <a href="mailto:agency@sakariwellness.com?subject=CV%20Submission" class="btn btn-primary">
+                    <a href="#contact" class="btn btn-primary">
                         <i class="fas fa-user-nurse"></i>Hire a Nurse Now
                     </a>
                     <a href="mailto:agency@sakariwellness.com?subject=CV%20Submission" class="btn btn-secondary">
@@ -597,7 +597,7 @@
                             <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
                                 <i class="bi bi-telephone"></i>
                                 <h3>Call Us</h3>
-                                <p>+1 909-723-2671 | +63 917 168 148</p>
+                                <p>0917 168 6148</p>
                             </div>
                         </div>
                         <div class="col-md-6">
