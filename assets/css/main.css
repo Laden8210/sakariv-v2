@@ -931,10 +931,11 @@ section,
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 80px 0;
+  padding: 150px 0;
   display: flex;
   align-items: center;
   overflow: hidden;
+  
 }
 
 .hero::before {
@@ -1092,11 +1093,13 @@ section,
   flex-wrap: wrap;
   gap: 30px;
   margin-top: 4rem;
+
 }
 
 .stat-item {
   display: flex;
   align-items: center;
+    position: relative;
 }
 
 .stat-icon {
@@ -1129,6 +1132,31 @@ section,
   letter-spacing: 1px;
 }
 
+.stat-item::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 9999; 
+  pointer-events: none;
+  text-align: center;
+}
+
+.stat-item:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
 /* Responsive Design */
 @media (max-width: 992px) {
   .hero h1 {

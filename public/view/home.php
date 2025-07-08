@@ -1,4 +1,4 @@
-    <section class="hero section dark-background" id="hero" >
+    <section class="hero section dark-background" id="hero">
         <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" alt="Healthcare professionals" class="hero-background">
 
         <div class="container">
@@ -17,38 +17,39 @@
                         <i class="fas fa-calendar-check"></i>Schedule a Consultation
                     </a>
                 </div>
-
                 <div class="stats">
-                    <div class="stat-item">
+                    <div class="stat-item" data-tooltip="Outsourcing to Sakari lets clients hire experienced full-time virtual staff at a fraction of the cost of U.S.-based employees—without sacrificing quality.">
                         <div class="stat-icon">
-                            <i class="fas fa-user-md"></i>
+                            <i class="fas fa-money-bill-wave"></i>
                         </div>
                         <div class="stat-content">
-                            <h3>100+</h3>
-                            <p>Healthcare Professionals</p>
+                            <h3>Up to 70%</h3>
+                            <p>Reduction in Labor Costs</p>
                         </div>
                     </div>
 
-                    <div class="stat-item">
+                    <div class="stat-item" data-tooltip="Clients reclaim valuable hours by offloading time-consuming work like scheduling, transcription, prior authorizations, and billing follow-ups.">
                         <div class="stat-icon">
-                            <i class="fas fa-globe-americas"></i>
+                            <i class="fas fa-clock"></i>
                         </div>
                         <div class="stat-content">
-                            <h3>20+</h3>
-                            <p>Countries Served</p>
+                            <h3>50% Less</h3>
+                            <p>Time on Admin Tasks</p>
                         </div>
                     </div>
 
-                    <div class="stat-item">
+                    <div class="stat-item" data-tooltip="Our streamlined sourcing, onboarding, and training process enables rapid team growth—often within days instead of months.">
                         <div class="stat-icon">
-                            <i class="fas fa-hands-helping"></i>
+                            <i class="fas fa-users-cog"></i>
                         </div>
                         <div class="stat-content">
-                            <h3>98%</h3>
-                            <p>Client Satisfaction</p>
+                            <h3>3x Faster</h3>
+                            <p>Team Scaling</p>
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </section>
@@ -206,9 +207,9 @@
                             <h4>Van Cacho FNP-BC</h4>
                             <span>CEO & Co-Founder</span>
                             <div class="social">
-                          
+
                                 <a href=""><i class="bi bi-facebook"></i></a>
-           
+
                                 <a href="https://www.linkedin.com/in/junette-cacho-8a7309138/"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
@@ -249,7 +250,7 @@
                             <div class="social">
 
                                 <a href=""><i class="bi bi-facebook"></i></a>
-       
+
                                 <a href="https://www.linkedin.com/in/glenda-belarmino-67a04421/"><i class="bi bi-linkedin"></i></a>
                             </div>
                         </div>
