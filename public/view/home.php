@@ -598,14 +598,15 @@
                             <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
                                 <i class="bi bi-telephone"></i>
                                 <h3>Call Us</h3>
-                                <p>0917 168 6148</p>
+                                <p>+639171686148</p>
+                                <p>+19097232671</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
                                 <i class="bi bi-envelope"></i>
                                 <h3>Email Us</h3>
-                                <p>agency@sakariwellness.com</p>
+                                <p>Agency@sakarimanagement.com</p>
                             </div>
                         </div>
                     </div>
