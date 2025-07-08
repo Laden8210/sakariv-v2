@@ -88,11 +88,11 @@
                         <p>Carlsbad CA 92011 United States</p>
 
                         <p class="mt-3"><strong>Phone:</strong><br>
-                            <span>0917 168 6148</span><br>
-                         
+                            <span>+19097232671</span><br>
+                            <span>+639171686148</span>
                         </p>
                         <p><strong>Email:</strong><br>
-                            <span>agency@sakariwellness.com</span>
+                            <span>agency@sakarimanagement.com</span>
                         </p>
                     </div>
                     <div class="social-links d-flex mt-4">
