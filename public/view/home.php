@@ -13,7 +13,7 @@
                     <a href="#contact" class="btn btn-primary">
                         <i class="fas fa-user-nurse"></i>Hire a Nurse Now
                     </a>
-                    <a href="mailto:agency@sakariwellness.com?subject=CV%20Submission" class="btn btn-secondary">
+                    <a href="https://calendly.com/junettecacho-sakarimanagement/30min" class="btn btn-secondary">
                         <i class="fas fa-calendar-check"></i>Schedule a Consultation
                     </a>
                 </div>
@@ -237,25 +237,6 @@
                 </div><!-- End Team Member -->
 
 
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="member">
-                        <div class="pic"><img src="assets/img/team/glenda-v3.png" class="img-fluid" alt=""></div>
-                        <div class="member-description ">
-                            Glenda Lu-Belarmino – Chief of Human Resources<br>
-                            A seasoned RN and operations leader, Glenda brings a decade of experience in building and managing high-performing VA teams. She drives talent acquisition, performance optimization, and strategic growth.
-                        </div>
-                        <div class="member-info">
-                            <h4>Glenda Lu-Belarmino BSN, RN, MN</h4>
-                            <span>Chief of Human Resources</span>
-                            <div class="social">
-
-                                <a href=""><i class="bi bi-facebook"></i></a>
-
-                                <a href="https://www.linkedin.com/in/glenda-belarmino-67a04421/"><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="member">
