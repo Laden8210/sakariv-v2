@@ -128,14 +128,7 @@
 
 
                 <div class="col-xl-3 col-md-3 col-6 client-logo d-flex justify-content-center">
-                    <img src="assets/img/igot.png" class="img-fluid" alt="">
-                </div><!-- End Client Item -->
-                <div class="col-xl-3 col-md-3 col-6 client-logo d-flex justify-content-center">
-                    <a href="https://igostaffing.com/" target="_blank">
-
-                        <img src="assets/img/logo.png" class="img-fluid" alt="">
-                    </a>
-
+                    <img src="assets/img/logo.png" class="img-fluid" alt="">
                 </div><!-- End Client Item -->
                 <div class="col-xl-3 col-md-3 col-6 client-logo d-flex justify-content-center">
 
@@ -194,7 +187,7 @@
 
         <div class="container">
 
-            <div class="row gy-5">
+            <div class="row gy-5 justify-content-center">
 
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="member">

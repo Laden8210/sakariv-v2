@@ -62,7 +62,6 @@
                         <li><a href="#team">Team</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="https://igostaffing.com/" target="_blank">Visit iGO Staffing</a></li>
                     </ul>
                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
