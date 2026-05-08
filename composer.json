@@ -1,5 +1,12 @@
 {
     "require": {
-        "phpmailer/phpmailer": "^6.10"
+        "phpmailer/phpmailer": "^6.10",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "scripts": {
+        "migrate": "php database/migrate.php migrate",
+        "migrate:fresh": "php database/migrate.php fresh",
+        "migrate:rollback": "php database/migrate.php rollback",
+        "seed": "php database/migrate.php seed"
     }
 }

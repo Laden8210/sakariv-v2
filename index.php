@@ -8,16 +8,20 @@ try {
 
     // Initialize database
     require_once __DIR__ . '/database/init.php';
-    getDB();
+    $db = getDB();
 
     $isLocal = $_SERVER['HTTP_HOST'] === 'localhost';
-    $baseUrl = $isLocal ? 'http://localhost/sakari-v2' : '';
+    $baseUrl = $isLocal ? '/sakari-v2/' : '/';
+    // Make baseUrl available to all views
+    $GLOBALS['baseUrl'] = $baseUrl;
     $request = trim(preg_replace('/[^a-zA-Z0-9_-]/', '', str_replace('/sakari-v2/', '', explode('?', $_SERVER['REQUEST_URI'])[0])), '/');
+    $GLOBALS['currentRoute'] = $request;
 
     $routes = [
         '' => ['file' => 'home.php', 'title' => 'Home', 'auth_required' => false],
         'apply' => ['file' => 'apply.php', 'title' => 'Apply Now', 'auth_required' => false],
         'blog' => ['file' => 'blog.php', 'title' => 'Blog & Insights', 'auth_required' => false],
+        'blog-post' => ['file' => 'blog-post.php', 'title' => 'Blog Post', 'auth_required' => false],
         'careers' => ['file' => 'careers.php', 'title' => 'Career Opportunities', 'auth_required' => false],
 
         // Admin routes
@@ -32,7 +36,7 @@ try {
     // Handle admin logout
     if ($request === 'admin-logout') {
         unset($_SESSION['admin']);
-        header('Location: admin-login');
+        header('Location: ' . $baseUrl . 'admin-login');
         exit;
     }
 
@@ -54,7 +58,7 @@ try {
     // Admin auth check
     if (($route['auth_required'] ?? false) === 'admin') {
         if (!isset($_SESSION['admin'])) {
-            header('Location: admin-login?error=session');
+            header('Location: ' . $baseUrl . 'admin-login?error=session');
             exit;
         }
     } elseif ($route['auth_required']) {

@@ -2,8 +2,11 @@
 session_start();
 require_once __DIR__ . '/../../database/init.php';
 
+$isLocal = $_SERVER['HTTP_HOST'] === 'localhost';
+$baseUrl = $isLocal ? '/sakari-v2/' : '/';
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: /admin-login');
+    header('Location: ' . $baseUrl . 'admin-login');
     exit;
 }
 
@@ -12,7 +15,7 @@ $username = trim($_POST['username'] ?? '');
 $password = $_POST['password'] ?? '';
 
 if (empty($username) || empty($password)) {
-    header('Location: /admin-login?error=required');
+    header('Location: ' . $baseUrl . 'admin-login?error=required');
     exit;
 }
 
@@ -21,7 +24,7 @@ $stmt->execute([$username]);
 $user = $stmt->fetch();
 
 if (!$user || !password_verify($password, $user['password'])) {
-    header('Location: /admin-login?error=invalid');
+    header('Location: ' . $baseUrl . 'admin-login?error=invalid');
     exit;
 }
 
@@ -33,5 +36,5 @@ $_SESSION['admin'] = [
     'user_agent' => $_SERVER['HTTP_USER_AGENT'],
 ];
 
-header('Location: /admin-dashboard');
+header('Location: ' . $baseUrl . 'admin-dashboard');
 exit;

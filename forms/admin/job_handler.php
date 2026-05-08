@@ -2,14 +2,17 @@
 session_start();
 require_once __DIR__ . '/../../database/init.php';
 
+$isLocal = $_SERVER['HTTP_HOST'] === 'localhost';
+$baseUrl = $isLocal ? '/sakari-v2/' : '/';
+
 // Auth check
 if (!isset($_SESSION['admin'])) {
-    header('Location: /admin-login?error=session');
+    header('Location: ' . $baseUrl . 'admin-login?error=session');
     exit;
 }
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: /admin-jobs');
+    header('Location: ' . $baseUrl . 'admin-jobs');
     exit;
 }
 
@@ -65,5 +68,5 @@ try {
     $_SESSION['flash_error'] = 'Error: ' . $e->getMessage();
 }
 
-header('Location: /admin-jobs');
+header('Location: ' . $baseUrl . 'admin-jobs');
 exit;

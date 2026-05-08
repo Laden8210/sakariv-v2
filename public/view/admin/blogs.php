@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../../../database/init.php';
 $db = getDB();
+$baseUrl = $GLOBALS['baseUrl'] ?? '/';
 $blogs = $db->query("SELECT * FROM blog_posts ORDER BY created_at DESC")->fetchAll();
 $published = array_filter($blogs, fn($b) => $b['status'] === 'published');
 $drafts = array_filter($blogs, fn($b) => $b['status'] === 'draft');
@@ -64,7 +65,7 @@ $drafts = array_filter($blogs, fn($b) => $b['status'] === 'draft');
             <button class="btn-admin btn-admin-sm btn-admin-edit" onclick="editBlog(<?= htmlspecialchars(json_encode($blog), ENT_QUOTES, 'UTF-8') ?>)">
                 <i class="bi bi-pencil"></i> Edit
             </button>
-            <form method="POST" action="forms/admin/blog_handler.php" style="display:inline;" onsubmit="return confirm('Delete this post?');">
+            <form method="POST" action="<?= $baseUrl ?>forms/admin/blog_handler.php" style="display:inline;" onsubmit="return confirm('Delete this post?');">
                 <input type="hidden" name="action" value="delete">
                 <input type="hidden" name="id" value="<?= $blog['id'] ?>">
                 <button type="submit" class="btn-admin btn-admin-sm btn-admin-delete">
@@ -87,7 +88,7 @@ $drafts = array_filter($blogs, fn($b) => $b['status'] === 'draft');
             </div>
             <button class="modal-close" onclick="closeModal('blogModal')"><i class="bi bi-x-lg"></i></button>
         </div>
-        <form id="blogForm" method="POST" action="forms/admin/blog_handler.php">
+        <form id="blogForm" method="POST" action="<?= $baseUrl ?>forms/admin/blog_handler.php">
             <input type="hidden" name="action" id="blogAction" value="create">
             <input type="hidden" name="id" id="blogId" value="">
             <div class="modal-body">

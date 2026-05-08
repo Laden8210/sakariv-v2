@@ -1,3 +1,6 @@
+<?php
+$baseUrl = $GLOBALS['baseUrl'] ?? '/';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login | Sakari Management Group</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="<?= $baseUrl ?>assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -284,7 +287,7 @@
         <div class="orb orb-3"></div>
 
         <div class="branding-content">
-            <img src="assets/img/logo.png" alt="Sakari Management Group">
+            <img src="<?= $baseUrl ?>assets/img/logo.png" alt="Sakari Management Group">
             <h1>Sakari Admin</h1>
             <p>Manage your healthcare virtual staffing platform with ease</p>
         </div>
@@ -331,7 +334,7 @@
                 </div>
             <?php endif; ?>
 
-            <form action="forms/admin/login_handler.php" method="POST">
+            <form action="<?= $baseUrl ?>forms/admin/login_handler.php" method="POST">
                 <div class="form-group">
                     <label for="username">Username</label>
                     <div class="input-wrapper">
@@ -352,7 +355,7 @@
             </form>
 
             <div class="login-footer">
-                <a href="/">
+                <a href="<?= $baseUrl ?>">
                     <i class="bi bi-arrow-left"></i> Back to Website
                 </a>
             </div>

@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../../database/init.php';
 $db = getDB();
+$baseUrl = $GLOBALS['baseUrl'] ?? '/';
 $jobs = $db->query("SELECT * FROM jobs WHERE status='published' ORDER BY created_at DESC")->fetchAll();
 ?>
 
@@ -11,7 +12,7 @@ $jobs = $db->query("SELECT * FROM jobs WHERE status='published' ORDER BY created
             <p style="font-size: 1.1rem; max-width: 600px; margin: 10px auto 0;">Join Sakari Management Group and make a meaningful impact in healthcare from anywhere in the world.</p>
             <nav class="breadcrumbs">
                 <ol>
-                    <li><a href="/">Home</a></li>
+                    <li><a href="<?= $baseUrl ?>">Home</a></li>
                     <li class="current">Careers</li>
                 </ol>
             </nav>

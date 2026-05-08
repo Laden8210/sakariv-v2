@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../../../database/init.php';
 $db = getDB();
+$baseUrl = $GLOBALS['baseUrl'] ?? '/';
 $jobs = $db->query("SELECT * FROM jobs ORDER BY created_at DESC")->fetchAll();
 $published = array_filter($jobs, fn($j) => $j['status'] === 'published');
 $drafts = array_filter($jobs, fn($j) => $j['status'] === 'draft');
@@ -64,7 +65,7 @@ $drafts = array_filter($jobs, fn($j) => $j['status'] === 'draft');
             <button class="btn-admin btn-admin-sm btn-admin-edit" onclick="editJob(<?= htmlspecialchars(json_encode($job), ENT_QUOTES, 'UTF-8') ?>)">
                 <i class="bi bi-pencil"></i> Edit
             </button>
-            <form method="POST" action="forms/admin/job_handler.php" style="display:inline;" onsubmit="return confirm('Delete this job posting?');">
+            <form method="POST" action="<?= $baseUrl ?>forms/admin/job_handler.php" style="display:inline;" onsubmit="return confirm('Delete this job posting?');">
                 <input type="hidden" name="action" value="delete">
                 <input type="hidden" name="id" value="<?= $job['id'] ?>">
                 <button type="submit" class="btn-admin btn-admin-sm btn-admin-delete">
@@ -87,7 +88,7 @@ $drafts = array_filter($jobs, fn($j) => $j['status'] === 'draft');
             </div>
             <button class="modal-close" onclick="closeModal('jobModal')"><i class="bi bi-x-lg"></i></button>
         </div>
-        <form id="jobForm" method="POST" action="forms/admin/job_handler.php">
+        <form id="jobForm" method="POST" action="<?= $baseUrl ?>forms/admin/job_handler.php">
             <input type="hidden" name="action" id="jobAction" value="create">
             <input type="hidden" name="id" id="jobId" value="">
             <div class="modal-body">

@@ -1,3 +1,4 @@
+<?php $baseUrl = $GLOBALS['baseUrl'] ?? '/'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($title ?? 'Admin') ?> | Sakari Admin</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/css/admin.css" rel="stylesheet">
+    <link href="<?= $baseUrl ?>assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="<?= $baseUrl ?>assets/css/admin.css" rel="stylesheet">
 </head>
 <body class="admin-body">
 
     <!-- Sidebar -->
     <aside class="admin-sidebar" id="adminSidebar">
         <div class="sidebar-brand">
-            <img src="assets/img/logo.png" alt="Sakari">
+            <img src="<?= $baseUrl ?>assets/img/logo.png" alt="Sakari">
             <div>
                 <h3>Sakari</h3>
                 <span>Admin Panel</span>
@@ -22,32 +23,32 @@
 
         <nav>
             <div class="nav-section">Main</div>
-            <a href="admin-dashboard" class="nav-link <?= ($request ?? '') === 'admin-dashboard' ? 'active' : '' ?>">
+            <a href="<?= $baseUrl ?>admin-dashboard" class="nav-link <?= ($request ?? '') === 'admin-dashboard' ? 'active' : '' ?>">
                 <i class="bi bi-grid-1x2-fill"></i> Dashboard
             </a>
 
             <div class="nav-section">Content</div>
-            <a href="admin-blogs" class="nav-link <?= ($request ?? '') === 'admin-blogs' ? 'active' : '' ?>">
+            <a href="<?= $baseUrl ?>admin-blogs" class="nav-link <?= ($request ?? '') === 'admin-blogs' ? 'active' : '' ?>">
                 <i class="bi bi-journal-richtext"></i> Blog Posts
             </a>
-            <a href="admin-jobs" class="nav-link <?= ($request ?? '') === 'admin-jobs' ? 'active' : '' ?>">
+            <a href="<?= $baseUrl ?>admin-jobs" class="nav-link <?= ($request ?? '') === 'admin-jobs' ? 'active' : '' ?>">
                 <i class="bi bi-briefcase-fill"></i> Job Postings
             </a>
 
             <div class="nav-section">Pages</div>
-            <a href="/" class="nav-link" target="_blank">
+            <a href="<?= $baseUrl ?>" class="nav-link" target="_blank">
                 <i class="bi bi-box-arrow-up-right"></i> View Website
             </a>
-            <a href="blog" class="nav-link" target="_blank">
+            <a href="<?= $baseUrl ?>blog" class="nav-link" target="_blank">
                 <i class="bi bi-file-earmark-text"></i> View Blog
             </a>
-            <a href="careers" class="nav-link" target="_blank">
+            <a href="<?= $baseUrl ?>careers" class="nav-link" target="_blank">
                 <i class="bi bi-file-earmark-person"></i> View Careers
             </a>
         </nav>
 
         <div class="sidebar-footer">
-            <a href="admin-logout" class="nav-link">
+            <a href="<?= $baseUrl ?>admin-logout" class="nav-link">
                 <i class="bi bi-box-arrow-left"></i> Logout
             </a>
         </div>
@@ -68,7 +69,7 @@
                 </div>
             </div>
             <div class="header-actions">
-                <a href="/" target="_blank" class="header-link" title="View Website">
+                <a href="<?= $baseUrl ?>" target="_blank" class="header-link" title="View Website">
                     <i class="bi bi-globe2"></i>
                 </a>
                 <div class="user-info">

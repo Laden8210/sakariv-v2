@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../../../database/init.php';
 $db = getDB();
+$baseUrl = $GLOBALS['baseUrl'] ?? '/';
 
 $totalBlogs = $db->query("SELECT COUNT(*) FROM blog_posts")->fetchColumn();
 $publishedBlogs = $db->query("SELECT COUNT(*) FROM blog_posts WHERE status='published'")->fetchColumn();
@@ -57,13 +58,13 @@ $recentJobs = $db->query("SELECT * FROM jobs ORDER BY created_at DESC LIMIT 5")-
 
 <!-- Quick Actions -->
 <div style="display: flex; gap: 12px; margin-bottom: 32px; flex-wrap: wrap;">
-    <a href="admin-blogs" class="btn-admin btn-admin-primary" style="text-decoration:none;">
+    <a href="<?= $baseUrl ?>admin-blogs" class="btn-admin btn-admin-primary" style="text-decoration:none;">
         <i class="bi bi-plus-lg"></i> New Blog Post
     </a>
-    <a href="admin-jobs" class="btn-admin btn-admin-outline" style="text-decoration:none;">
+    <a href="<?= $baseUrl ?>admin-jobs" class="btn-admin btn-admin-outline" style="text-decoration:none;">
         <i class="bi bi-plus-lg"></i> New Job Posting
     </a>
-    <a href="/" target="_blank" class="btn-admin btn-admin-outline" style="text-decoration:none;">
+    <a href="<?= $baseUrl ?>" target="_blank" class="btn-admin btn-admin-outline" style="text-decoration:none;">
         <i class="bi bi-globe2"></i> View Website
     </a>
 </div>
@@ -74,7 +75,7 @@ $recentJobs = $db->query("SELECT * FROM jobs ORDER BY created_at DESC LIMIT 5")-
     <div class="admin-card">
         <div class="card-header">
             <h3><i class="bi bi-journal-richtext" style="margin-right: 8px; color: var(--admin-info);"></i>Recent Blog Posts</h3>
-            <a href="admin-blogs" class="btn-admin btn-admin-sm btn-admin-outline" style="text-decoration:none;">View All</a>
+            <a href="<?= $baseUrl ?>admin-blogs" class="btn-admin btn-admin-sm btn-admin-outline" style="text-decoration:none;">View All</a>
         </div>
         <div class="card-body">
             <?php if (empty($recentBlogs)): ?>
@@ -110,7 +111,7 @@ $recentJobs = $db->query("SELECT * FROM jobs ORDER BY created_at DESC LIMIT 5")-
     <div class="admin-card">
         <div class="card-header">
             <h3><i class="bi bi-briefcase-fill" style="margin-right: 8px; color: var(--admin-accent);"></i>Recent Job Postings</h3>
-            <a href="admin-jobs" class="btn-admin btn-admin-sm btn-admin-outline" style="text-decoration:none;">View All</a>
+            <a href="<?= $baseUrl ?>admin-jobs" class="btn-admin btn-admin-sm btn-admin-outline" style="text-decoration:none;">View All</a>
         </div>
         <div class="card-body">
             <?php if (empty($recentJobs)): ?>

@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../../database/init.php';
 $db = getDB();
+$baseUrl = $GLOBALS['baseUrl'] ?? '/';
 
 $featured = $db->query("SELECT * FROM blog_posts WHERE status='published' AND is_featured=1 ORDER BY created_at DESC LIMIT 1")->fetch();
 $posts = $db->query("SELECT * FROM blog_posts WHERE status='published' AND is_featured=0 ORDER BY created_at DESC")->fetchAll();
@@ -13,7 +14,7 @@ $posts = $db->query("SELECT * FROM blog_posts WHERE status='published' AND is_fe
             <p style="font-size: 1.1rem; max-width: 600px; margin: 10px auto 0;">Stay updated with the latest in healthcare outsourcing, virtual staffing, and industry best practices.</p>
             <nav class="breadcrumbs">
                 <ol>
-                    <li><a href="/">Home</a></li>
+                    <li><a href="<?= $baseUrl ?>">Home</a></li>
                     <li class="current">Blog</li>
                 </ol>
             </nav>
@@ -28,6 +29,7 @@ $posts = $db->query("SELECT * FROM blog_posts WHERE status='published' AND is_fe
             <!-- Featured Post -->
             <div class="row mb-5">
                 <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
+                    <a href="<?= $baseUrl ?>blog-post?id=<?= $featured['id'] ?>" class="blog-card-link">
                     <article class="blog-card blog-card--featured">
                         <div class="row g-0">
                             <div class="col-lg-6">
@@ -46,7 +48,7 @@ $posts = $db->query("SELECT * FROM blog_posts WHERE status='published' AND is_fe
                                     <h2 class="blog-card__title"><?= htmlspecialchars($featured['title']) ?></h2>
                                     <p class="blog-card__excerpt"><?= htmlspecialchars($featured['excerpt']) ?></p>
                                     <div class="blog-card__author">
-                                        <img src="<?= htmlspecialchars($featured['author_img']) ?>" alt="<?= htmlspecialchars($featured['author_name']) ?>" class="blog-card__author-img">
+                                        <img src="<?= $baseUrl . htmlspecialchars($featured['author_img']) ?>" alt="<?= htmlspecialchars($featured['author_name']) ?>" class="blog-card__author-img">
                                         <div>
                                             <strong><?= htmlspecialchars($featured['author_name']) ?></strong>
                                             <span><?= htmlspecialchars($featured['author_role']) ?></span>
@@ -56,6 +58,7 @@ $posts = $db->query("SELECT * FROM blog_posts WHERE status='published' AND is_fe
                             </div>
                         </div>
                     </article>
+                    </a>
                 </div>
             </div>
             <?php endif; ?>
@@ -65,6 +68,7 @@ $posts = $db->query("SELECT * FROM blog_posts WHERE status='published' AND is_fe
             <div class="row gy-4">
                 <?php foreach ($posts as $i => $post): ?>
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="<?= (($i % 3) + 1) * 100 ?>">
+                    <a href="<?= $baseUrl ?>blog-post?id=<?= $post['id'] ?>" class="blog-card-link">
                     <article class="blog-card">
                         <div class="blog-card__image">
                             <img src="<?= htmlspecialchars($post['image_url']) ?>" alt="<?= htmlspecialchars($post['title']) ?>" class="img-fluid">
@@ -78,7 +82,7 @@ $posts = $db->query("SELECT * FROM blog_posts WHERE status='published' AND is_fe
                             <h3 class="blog-card__title"><?= htmlspecialchars($post['title']) ?></h3>
                             <p class="blog-card__excerpt"><?= htmlspecialchars($post['excerpt']) ?></p>
                             <div class="blog-card__author">
-                                <img src="<?= htmlspecialchars($post['author_img']) ?>" alt="<?= htmlspecialchars($post['author_name']) ?>" class="blog-card__author-img">
+                                <img src="<?= $baseUrl . htmlspecialchars($post['author_img']) ?>" alt="<?= htmlspecialchars($post['author_name']) ?>" class="blog-card__author-img">
                                 <div>
                                     <strong><?= htmlspecialchars($post['author_name']) ?></strong>
                                     <span><?= htmlspecialchars($post['author_role']) ?></span>
@@ -86,6 +90,7 @@ $posts = $db->query("SELECT * FROM blog_posts WHERE status='published' AND is_fe
                             </div>
                         </div>
                     </article>
+                    </a>
                 </div>
                 <?php endforeach; ?>
             </div>

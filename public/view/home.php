@@ -548,6 +548,110 @@
 
     </section><!-- /Features Section -->
 
+    <?php
+    // Fetch latest published blog posts and jobs for the home page
+    $homeBlogs = $db->query("SELECT * FROM blog_posts WHERE status='published' ORDER BY is_featured DESC, created_at DESC LIMIT 3")->fetchAll();
+    $homeJobs = $db->query("SELECT * FROM jobs WHERE status='published' ORDER BY created_at DESC LIMIT 4")->fetchAll();
+    $baseUrl = $GLOBALS['baseUrl'] ?? '/';
+    ?>
+
+    <!-- Latest Blog Posts Section -->
+    <?php if (!empty($homeBlogs)): ?>
+    <section id="latest-blog" class="blog section">
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Blog</h2>
+            <p>Latest Insights</p>
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row gy-4">
+                <?php foreach ($homeBlogs as $i => $post): ?>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="<?= (($i % 3) + 1) * 100 ?>">
+                    <a href="<?= $baseUrl ?>blog-post?id=<?= $post['id'] ?>" class="blog-card-link">
+                    <article class="blog-card">
+                        <div class="blog-card__image">
+                            <img src="<?= htmlspecialchars($post['image_url']) ?>" alt="<?= htmlspecialchars($post['title']) ?>" class="img-fluid">
+                            <span class="blog-card__badge<?= $post['badge_color'] ? ' blog-card__badge--' . htmlspecialchars($post['badge_color']) : '' ?>"><?= htmlspecialchars($post['category']) ?></span>
+                        </div>
+                        <div class="blog-card__body">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date"><i class="bi bi-calendar3"></i> <?= date('F d, Y', strtotime($post['created_at'])) ?></span>
+                                <span class="blog-card__read-time"><i class="bi bi-clock"></i> <?= htmlspecialchars($post['read_time']) ?></span>
+                            </div>
+                            <h3 class="blog-card__title"><?= htmlspecialchars($post['title']) ?></h3>
+                            <p class="blog-card__excerpt"><?= htmlspecialchars(mb_strimwidth($post['excerpt'], 0, 120, '...')) ?></p>
+                            <div class="blog-card__author">
+                                <?php if ($post['author_img']): ?>
+                                <img src="<?= $baseUrl . htmlspecialchars($post['author_img']) ?>" alt="<?= htmlspecialchars($post['author_name']) ?>" class="blog-card__author-img">
+                                <?php endif; ?>
+                                <div>
+                                    <strong><?= htmlspecialchars($post['author_name']) ?></strong>
+                                    <span><?= htmlspecialchars($post['author_role']) ?></span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+            </div>
+
+            <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="400">
+                <a href="<?= $baseUrl ?>blog" class="btn btn-primary" style="font-size: 0.9rem;">
+                    <i class="bi bi-journal-richtext"></i> View All Posts
+                </a>
+            </div>
+        </div>
+    </section>
+    <?php endif; ?>
+
+    <!-- Open Positions Section -->
+    <?php if (!empty($homeJobs)): ?>
+    <section id="open-positions" class="careers section light-background">
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Careers</h2>
+            <p>Open Positions</p>
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row gy-4">
+                <?php foreach ($homeJobs as $i => $job): ?>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="<?= (($i % 2) + 1) * 100 ?>">
+                    <div class="job-card">
+                        <div class="job-card__header">
+                            <div class="job-card__type job-card__type--<?= strtolower(str_replace('-', '', $job['type'])) ?>"><?= htmlspecialchars($job['type']) ?></div>
+                            <div class="job-card__posted">Posted <?= date('M d, Y', strtotime($job['created_at'])) ?></div>
+                        </div>
+                        <h3 class="job-card__title"><?= htmlspecialchars($job['title']) ?></h3>
+                        <p class="job-card__company"><i class="bi bi-building"></i> Sakari Management Group</p>
+                        <p class="job-card__description"><?= htmlspecialchars(mb_strimwidth($job['description'], 0, 150, '...')) ?></p>
+                        <div class="job-card__details">
+                            <span><i class="bi bi-geo-alt"></i> <?= htmlspecialchars($job['location']) ?></span>
+                            <span><i class="bi bi-clock"></i> <?= htmlspecialchars($job['shift']) ?></span>
+                            <span><i class="bi bi-cash"></i> <?= htmlspecialchars($job['salary']) ?></span>
+                        </div>
+                        <?php if (!empty($job['tags'])): ?>
+                        <div class="job-card__tags">
+                            <?php foreach (array_slice(explode(',', $job['tags']), 0, 3) as $tag): ?>
+                                <span class="job-tag"><?= htmlspecialchars(trim($tag)) ?></span>
+                            <?php endforeach; ?>
+                        </div>
+                        <?php endif; ?>
+                        <a href="https://calendly.com/junettecacho-sakarimanagement/30min" target="_blank" class="job-card__apply">Apply Now <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+
+            <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="300">
+                <a href="<?= $baseUrl ?>careers" class="btn btn-primary" style="font-size: 0.9rem;">
+                    <i class="bi bi-briefcase"></i> View All Positions
+                </a>
+            </div>
+        </div>
+    </section>
+    <?php endif; ?>
+
     <section id="contact" class="contact section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
